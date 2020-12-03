@@ -55,7 +55,7 @@ const dragonsReducer = (state = stateInit, action = {}) => {
 
         case REMOVE_DRAGON:
             let registeredDragons = [...state.dragons];
-            registeredDragons.splice(action.target, 1)
+            registeredDragons.splice(action.payload.target, 1)
 
             return {
                 ...state,
