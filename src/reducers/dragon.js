@@ -31,7 +31,7 @@ const dragonsReducer = (state = stateInit, action = {}) => {
             {
                 return {
                     ...state,
-                    error: 'Veuillez saisir un nom de dragon !'
+                    error: 'Veuillez saisir un nom du dragon !'
                 };
             }
 
@@ -39,7 +39,7 @@ const dragonsReducer = (state = stateInit, action = {}) => {
             {
                 return {
                     ...state,
-                    error: 'Ce dragon a déjà été enregistrée !'
+                    error: 'On le connait se dragon !'
                 };
             }
 

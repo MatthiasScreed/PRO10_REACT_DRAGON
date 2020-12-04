@@ -27,7 +27,6 @@ const App = () => {
 
     return (
           <Container fluid>
-
               { error &&
 
                   <Alert variant='danger'>
@@ -35,11 +34,9 @@ const App = () => {
                   </Alert>
 
               }
-
             <Container>
-              <p>Dragon number : {dragons.length}</p>
+              <p>Le nbre de dragon : {dragons.length}</p>
             </Container>
-
             <Container>
               <Row>
                 <Col>
@@ -47,23 +44,17 @@ const App = () => {
                   <Form onSubmit={ handleSubmit }>
 
                     <Form.Group>
-
                       <Form.Label htmlFor="dragon_name">Dragon name</Form.Label>
                       <Form.Control type="text" id="dragon_name" value={dragon} placeholder="Dragon name" onChange={ handleChange } />
-
                     </Form.Group>
 
-                      <Button variant="primary" type="submit">
-                          Add
-                      </Button>
+                      <Button variant="primary" type="submit">Ajouter</Button>
 
                   </Form>
                 </Col>
                 <Col>
-                    <h1>Dragons registered :</h1>
-                    <Button variant="primary" type="button" onClick={ () => dispatch(reverseOrder()) }>
-                        Reverse order
-                    </Button>
+                    <h1>Dragons enregistrer :</h1>
+                    <Button variant="primary" type="button" onClick={ () => dispatch(reverseOrder()) }>inverted</Button>
                     <ul>
                         { dragons.map( (dragonName, index) => {
 
